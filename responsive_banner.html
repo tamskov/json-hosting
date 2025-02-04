@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Lottie Banner</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #banner-container {
+      position: relative;
+      width: 100%;
+      height: 480px;
+    }
+
+    /* Mobil nézet - maximum 768px-es képernyőszélességnél */
+    @media (max-width: 768px) {
+      #desktop-banner {
+        display: none; /* Desktop animáció rejtése mobilon */
+      }
+      #mobile-banner {
+        display: block; /* Mobil animáció megjelenítése mobilon */
+      }
+    }
+
+    /* Desktop nézet - minimum 769px-es képernyőszélességnél */
+    @media (min-width: 769px) {
+      #desktop-banner {
+        display: block; /* Desktop animáció megjelenítése desktopon */
+      }
+      #mobile-banner {
+        display: none; /* Mobil animáció rejtése desktopon */
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="banner-container">
+    <!-- Desktop animáció -->
+    <iframe 
+      id="desktop-banner" 
+      src="https://tamskov.github.io/json-hosting/iframe_banner.html" 
+      title="Lottie Desktop Animáció">
+    </iframe>
+
+    <!-- Mobil animáció -->
+    <iframe 
+      id="mobile-banner" 
+      src="https://tamskov.github.io/json-hosting/iframe_banner_mobile.html" 
+      title="Lottie Mobil Animáció">
+    </iframe>
+  </div>
+</body>
+</html>
